@@ -1,12 +1,23 @@
-var express = require('express');
 var path = require('path');
-var logger = require('morgan');
+var express = require('express');
 var bodyParser = require('body-parser');
+var compression = require('compression');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var async = require('async');
+var colors = require('colors');
+var mongoose = require('mongoose');
+var request = require('request');
+var React = require('react');
+var Router = require('react-router');
+var swig  = require('swig');
+var xml2js = require('xml2js');
+var _ = require('underscore');
 
 var swig = require('swig');
 var React = require('react');
 var Router = require('react-router');
-var routes = ('./app/routes');
+var routes = require('./app/routes');
 
 var app = express();
 
